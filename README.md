@@ -259,6 +259,146 @@ plt.show()
 
 
   
+QUERRY 2 :-Create SALE FORECAST POTENTIAL IN % YEAR ON BASED ON EXPIRY VEHICLES AGAINST 2005 TO 2025 
+
+ import matplotlib.pyplot as plt
+
+# --- Car Chart ---
+# Filter yoy_trend_cars_percentage for the years 2020 to 2040 (max expiry for 15-year rule)
+expiring_cars_plot_data = yoy_trend_cars_percentage[(yoy_trend_cars_percentage.index >= 2020) & (yoy_trend_cars_percentage.index <= 2040)]
+
+plt.figure(figsize=(12, 6))
+plt.plot(expiring_cars_plot_data.index, expiring_cars_plot_data.values, marker='o', linestyle='-')
+plt.title('Resale Potential % against Expired on Total Registered Car')
+plt.xlabel('Expiry Year')
+plt.ylabel('Year-on-Year Percentage Change (%)')
+plt.grid(True)
+# Show every year on the x-axis
+plt.xticks(expiring_cars_plot_data.index, rotation=45)
+
+# Set custom y-axis ticks for percentage markings
+# Adjust range based on typical year-on-year changes (can be negative)
+plt.yticks(range(-10, 15, 5)) # Example: -10%, -5%, 0%, 5%, 10%
+
+# Add percentage labels to each data point
+for year, value in expiring_cars_plot_data.items():
+    if not pd.isna(value):
+        plt.text(year, value + 0.5, f'{value:.2f}%', ha='center', va='bottom', fontsize=8)
+
+plt.tight_layout()
+plt.show()
+
+# --- Two Wheeler Chart ---
+# Filter yoy_trend_two_wheelers_percentage for the years 2025 to 2045 (max expiry for 20-year rule)
+expiring_two_wheelers_plot_data = yoy_trend_two_wheelers_percentage[(yoy_trend_two_wheelers_percentage.index >= 2025) & (yoy_trend_two_wheelers_percentage.index <= 2045)]
+
+plt.figure(figsize=(12, 6))
+plt.plot(expiring_two_wheelers_plot_data.index, expiring_two_wheelers_plot_data.values, marker='o', linestyle='-')
+plt.title('Resale Potential % against Expired on Total Registered Two Wheelers')
+plt.xlabel('Expiry Year')
+plt.ylabel('Year-on-Year Percentage Change (%)')
+plt.grid(True)
+# Show every year on the x-axis
+plt.xticks(expiring_two_wheelers_plot_data.index, rotation=45)
+
+# Set custom y-axis ticks for percentage markings
+# Adjust range based on typical year-on-year changes (can be negative)
+plt.yticks(range(-10, 15, 5)) # Example: -10%, -5%, 0%, 5%, 10%
+
+# Add percentage labels to each data point
+for year, value in expiring_two_wheelers_plot_data.items():
+    if not pd.isna(value):
+        plt.text(year, value + 0.5, f'{value:.2f}%', ha='center', va='bottom', fontsize=8)
+
+plt.tight_layout()
+plt.show()
+
+<img width="1405" height="587" alt="image" src="https://github.com/user-attachments/assets/af91591a-20ee-474e-b2d4-a718b1cd7893" /> 
 
 
- 
+<img width="1521" height="611" alt="image" src="https://github.com/user-attachments/assets/7553dafa-877c-477b-ae08-14e474853a76" />
+
+. Import Libraries
+import matplotlib.pyplot as plt
+
+
+Loads matplotlib to create charts.
+
+
+steps for Out Put as per Query 
+🚗 CAR CHART STEPS
+2. Filter Car Data (Select years 2020–2040)
+expiring_cars_plot_data = yoy_trend_cars_percentage[
+    (yoy_trend_cars_percentage.index >= 2020) &
+    (yoy_trend_cars_percentage.index <= 2040)
+]
+
+
+Keeps only the rows where the index (year) is between 2020 and 2040.
+
+3. Create a New Chart Window
+plt.figure(figsize=(12, 6))
+
+
+Sets chart size.
+
+4. Plot the Line Chart
+plt.plot(expiring_cars_plot_data.index,
+         expiring_cars_plot_data.values,
+         marker='o', linestyle='-')
+
+
+Plots year vs percentage.
+
+Adds dots (marker='o') and lines.
+
+5. Add Chart Title & Labels
+plt.title('Resale Potential % against Expired on Total Registered Car')
+plt.xlabel('Expiry Year')
+plt.ylabel('Year-on-Year Percentage Change (%)')
+
+
+Gives chart heading and axis names.
+
+6. Add Grid Lines
+plt.grid(True)
+
+7. Set X-Axis (Show every year)
+plt.xticks(expiring_cars_plot_data.index, rotation=45)
+
+8. Set Y-Axis Percentage Scale
+plt.yticks(range(-10, 15, 5))
+
+
+Sets y-axis ticks like −10%, −5%, 0%, 5%, 10%.
+
+9. Add Labels Above Each Point
+for year, value in expiring_cars_plot_data.items():
+    if not pd.isna(value):
+        plt.text(year, value + 0.5, f'{value:.2f}%', ...)
+
+
+Prints value above each point.
+
+10. Adjust Layout & Show Car Chart
+plt.tight_layout()
+plt.show()
+
+🏍️ TWO-WHEELER CHART STEPS
+
+Same process again, but with different year range:
+
+11. Filter two-wheeler data (2025–2045)
+expiring_two_wheelers_plot_data = yoy_trend_two_wheelers_percentage[
+    (yoy_trend_two_wheelers_percentage.index >= 2025) &
+    (yoy_trend_two_wheelers_percentage.index <= 2045)
+]
+
+12. Plot chart, add title, labels, grid, ticks, point labels
+
+(Same as car chart, but using two-wheeler data.)
+
+13. Show the two-wheeler chart
+plt.show()
+
+
