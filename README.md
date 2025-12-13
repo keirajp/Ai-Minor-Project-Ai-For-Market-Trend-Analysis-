@@ -258,8 +258,13 @@ plt.show()
 <img width="1654" height="458" alt="image" src="https://github.com/user-attachments/assets/e41ee8c3-3d65-4a84-9fcf-847cbb3f6876" />
 
 
+
+
+
   
 QUERRY 2 :-Create SALE FORECAST POTENTIAL IN % YEAR ON BASED ON EXPIRY VEHICLES AGAINST 2005 TO 2025 
+
+
 
  import matplotlib.pyplot as plt
 
@@ -402,7 +407,11 @@ expiring_two_wheelers_plot_data = yoy_trend_two_wheelers_percentage[
 plt.show()
 
 
+
+
 Querry 3 :- Create sale Forecast based on male female Gender base  for Car registered going to get expire where  used by girls 10%,woman 30% by man 40 % by boys 20%
+
+
 
 
 import pandas as pd
