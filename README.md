@@ -1,4 +1,7 @@
-Create Sale Forecast count base and Revenue base after expiry of car and two wheeler where car having 15 years and two wheelers having 20 years life after Registration.
+# Topic :-Create Sale Forecast count base and Revenue base after expiry of car and two wheeler where car having 15 years and two wheelers having 20 years life after Registration.
+
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
