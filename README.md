@@ -1,8 +1,13 @@
-# Topic :-Create Sale Forecast count base and Revenue base after expiry of car and two wheeler where car having 15 years and two wheelers having 20 years life after Registration.
-
-# 
+# Project Topic :-Registered car and   2 wheelers for state Himachal Pradesh since 20 years with condition for below Queries .Expiry of 2 wheelers 20 years and for Car 15 years. Data used is uploaded in Git hub for analysis of Queries with registration details of count and price since 2005 to 2025.We have following three Querries for which we have to create out put for Market Trend Analysis .
 
 
+# Querry 1 :-Create Sale Forecast on count base and revenue base after expiry of car and 2 wheelers with year on year while there is 5 %    increase in price since the start Registration year 2005 @ each year. condition for two wheelers life is 20 years and car is 15 year after registration.
+
+# Querry 2:- Create market growth and decline trend analysis on count base in % against registered vehicle going to get expired year on year having potential for resale new vehicle against expired for both 2 wheelers and Car.
+
+# Querry 3:- Car used by Girls , woman, man , Boys above age 18 create by 10 % ,30%,20%,40% respectively create forecast for car sale potential on gender segment base by using clusters after expiry age is 15 years after registration .
+
+# Querry 1  out put :-Below the libraries imported as Panda,Numpy matplotlib and seaborn then data is uploaded as '/content/Himachal Base File.csv File.xlsx'.After data is cleaned and is used for analysis looping applied conditions and then forecast is created as per code with output in visual graph form can be view output and codes in below updated steps.
 
 import pandas as pd
 import numpy as np
@@ -267,7 +272,9 @@ plt.show()
 
 
   
-QUERRY 2 :-Create SALE FORECAST POTENTIAL IN % YEAR ON BASED ON EXPIRY VEHICLES AGAINST 2005 TO 2025 
+
+# Querry 2:- Create market growth and decline trend analysis on count base in % against registered vehicle going to get expired year on year having potential for resale new vehicle against expired for both 2 wheelers and Car
+# For querry 2 out put below the codes mentioend step by step to get visual chart input as can be viewed in visual report .
 
 
 
@@ -412,9 +419,9 @@ expiring_two_wheelers_plot_data = yoy_trend_two_wheelers_percentage[
 plt.show()
 
 
+# Querry 3:- Car used by Girls , woman, man , Boys above age 18 create by 10 % ,30%,20%,40% respectively create forecast for car sale potential on gender segment base by using clusters after expiry age is 15 years after registration
 
-
-Querry 3 :- Create sale Forecast based on male female Gender base  for Car registered going to get expire where  used by girls 10%,woman 30% by man 40 % by boys 20%
+# Querry 3 against implemented steps are mentioned below step by step to get output and output is shown in visual graph .
 
 
 
