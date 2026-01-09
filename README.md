@@ -9,6 +9,7 @@
 
 # Querry 1  out put :-Below the libraries imported as Panda,Numpy matplotlib and seaborn then data is uploaded as '/content/Himachal Base File.csv File.xlsx'.After data is cleaned and is used for analysis looping applied conditions and then forecast is created as per code with output in visual graph form can be view output and codes in below updated steps.
 
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -261,17 +262,8 @@ plt.legend(fontsize=10)
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()
+     
 
-
-  <img width="1786" height="531" alt="image" src="https://github.com/user-attachments/assets/efc8fdd1-8603-4ac6-bf22-c7c15967f2f5" />
-
-<img width="1654" height="458" alt="image" src="https://github.com/user-attachments/assets/e41ee8c3-3d65-4a84-9fcf-847cbb3f6876" />
-
-
-
-
-
-  
 
 # Querry 2:- Create market growth and decline trend analysis on count base in % against registered vehicle going to get expired year on year having potential for resale new vehicle against expired for both 2 wheelers and Car
 # For querry 2 out put below the codes mentioend step by step to get visual chart input as can be viewed in visual report .
