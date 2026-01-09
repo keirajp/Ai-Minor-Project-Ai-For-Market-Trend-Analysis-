@@ -263,6 +263,12 @@ plt.grid(True, linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()
 
+<img width="1986" height="698" alt="image" src="https://github.com/user-attachments/assets/38a6445d-726f-41c7-bf11-bebf1c874a2f" />
+
+<img width="1489" height="690" alt="image" src="https://github.com/user-attachments/assets/e4c5e145-9ca5-4009-8767-38eca43a56db" />
+
+
+
 
 
 # Querry 2:- Create market growth and decline trend analysis on count base in % against registered vehicle going to get expired year on year having potential for resale new vehicle against expired for both 2 wheelers and Car
