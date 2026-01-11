@@ -15,14 +15,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# --- 1. Data Loading ---
+# no 1 Data Loading ---
 excel_file_path = '/content/Himachal Base File.csv File.xlsx'
 sheet_names = ['Registered Vehicle Data', 'Expired Vehicle Summary']
 
 df_registrations = pd.read_excel(excel_file_path, sheet_name=sheet_names[0])
 df_expiry = pd.read_excel(excel_file_path, sheet_name=sheet_names[1])
 
-# --- 2. Column Cleaning ---
+# no.2 Column Cleaning ---
 # Function to clean column names
 def clean_column_names(df):
     cols = df.columns
@@ -71,7 +71,7 @@ price_growth_rate = 0.05
 two_wheeler_lifespan = 20
 car_lifespan = 15
 
-# Get min/max registration years and last known counts from historical data for forecasting new registrations
+# no.3 Get min/max registration years and last known counts from historical data for forecasting new registrations
 min_reg_year_tw = df_registrations['registration_year'].min()
 max_reg_year_tw = df_registrations['registration_year'].max()
 last_tw_reg_count = df_registrations.loc[df_registrations['registration_year'] == max_reg_year_tw, 'new_2_wheelers_registered_counts'].iloc[0]
@@ -80,7 +80,7 @@ min_reg_year_car = df_registrations['registration_year'].min()
 max_reg_year_car = df_registrations['registration_year'].max()
 last_car_reg_count = df_registrations.loc[df_registrations['registration_year'] == max_reg_year_car, '_new_carregistered_counts'].iloc[0]
 
-# --- 4. Generate df_forecast ---
+# No 4. Generate df_forecast ---
 forecasted_data = []
 
 for year in forecast_years:
@@ -131,9 +131,9 @@ for year in forecast_years:
 
 df_forecast = pd.DataFrame(forecasted_data)
 
-# --- 5. Calculate tw_expiry_prices and car_expiry_prices ---
+# no. 5 Calculate tw_expiry_prices and car_expiry_prices ---
 
-# Get initial prices from df_expiry
+#  Get initial prices from df_expiry
 # For two-wheelers, the earliest price is for 2025
 initial_tw_price_year = df_expiry['2w_expiry_reg+20'].min()
 initial_tw_price_value = df_expiry[df_expiry['2w_expiry_reg+20'] == initial_tw_price_year]['price_of_two_wheelers_after_expiry'].iloc[0]
@@ -168,14 +168,14 @@ tw_expiry_prices.index.name = 'Forecast_Year'
 car_expiry_prices = pd.Series(car_prices, name='Car_Expiry_Price')
 car_expiry_prices.index.name = 'Forecast_Year'
 
-# --- 6. Generate df_revenue ---
+# no. 6. Generate df_revenue ---
 df_revenue = df_forecast.set_index('Forecast_Year').copy()
 df_revenue['Revenue_Two_Wheelers'] = df_revenue['Expired_Two_Wheelers'] * tw_expiry_prices
 df_revenue['Revenue_Cars'] = df_revenue['Expired_Cars'] * car_expiry_prices
 df_revenue['Total_Revenue_Potential'] = df_revenue['Revenue_Two_Wheelers'] + df_revenue['Revenue_Cars']
 df_revenue = df_revenue.reset_index()
 
-# --- 7. Visualizations ---
+# no. 7. Visualizations ---
 sns.set_style("whitegrid")
 
 # Create a figure with two subplots for Expired Vehicles
