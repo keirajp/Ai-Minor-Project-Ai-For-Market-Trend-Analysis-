@@ -1,4 +1,6 @@
-# Project Topic :-Registered car and   2 wheelers for state Himachal Pradesh since 20 years with condition for below Queries .Expiry of 2 wheelers 20 years and for Car 15 years. Data used is uploaded in Git hub for analysis of Queries with registration details of count and price since 2005 to 2025.We have following three Querries for which we have to create out put for Market Trend Analysis .
+# Project  :Ai for  Market Trend Analysis
+# Project Topic :- 
+-Registered car and   2 wheelers for state Himachal Pradesh since 20 years with condition for below Queries .Expiry of 2 wheelers 20 years and for Car 15 years. Data used is uploaded in Git hub for analysis of Queries with registration details of count and price since 2005 to 2025.We have following three Querries for which we have to create out put for Market Trend Analysis .
 
 
 # Querry 1 :-Create Sale Forecast on count base and revenue base after expiry of car and 2 wheelers with year on year while there is 5 %    increase in price since the start Registration year 2005 @ each year. condition for two wheelers life is 20 years and car is 15 year after registration.
@@ -417,8 +419,7 @@ expiring_two_wheelers_plot_data = yoy_trend_two_wheelers_percentage[
 plt.show()
 
 
-# Querry 3:- Car used by Girls , woman, man , Boys above age 18 create by 10 % ,30%,20%,40% respectively create forecast for car sale potential on gender segment base by using clusters after expiry age is 15 years after registration
-
+# Querry 3:- Car used by Girls , woman, man , Boys above age 18 create by 10 % ,30%,20%,40% respectively create forecast for car sale potential on gender segment base by using clusters after expiry age is 15 years after registration.
 # Querry 3 against implemented steps are mentioned below step by step to get output and output is shown in visual graph .
 
 
